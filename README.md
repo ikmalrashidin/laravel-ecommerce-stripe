@@ -32,44 +32,42 @@ Make sure you have the following installed:
    ```bash
    git clone https://github.com/your-username/your-laravel-app.git
    cd your-laravel-app
-Install PHP dependencies
+   
+2. **Install PHP dependencies**
 
-bash
-Copy
-Edit
-composer install
-Install JavaScript dependencies
+    ```bash
+    composer install
+    
+3. **Install PHP dependencies**
 
-bash
-Copy
-Edit
-npm install
-# or
-yarn install
-Environment setup
+    ```bash
+    npm install
+    # or
+    yarn install
 
-bash
-Copy
-Edit
-cp .env.example .env
-Update .env with your database credentials and other configurations.
 
-Generate application key
+    
+4. **Environment setup**
 
-bash
-Copy
-Edit
-php artisan key:generate
-Run migrations and seeders
+    ```bash
+    cp .env.example .env
+    
+    Update .env with your database credentials and other configurations.
+    
+5. **Generate application key**
+    
+    ```bash
+    php artisan key:generate
+    
+6. **Run migrations and seeders**
+    
+    ```bash
+    php artisan migrate --seed
+    
+7. **Serve the application**
+    
+    ```bash
+    php artisan serve
 
-bash
-Copy
-Edit
-php artisan migrate --seed
-Serve the application
-
-bash
-Copy
-Edit
-php artisan serve
-Visit: http://127.0.0.1:8000
+   
+    Visit: http://127.0.0.1:8000
