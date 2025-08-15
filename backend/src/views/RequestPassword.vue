@@ -1,17 +1,6 @@
 <template>
-  <!--
-    This example requires updating your template:
 
-    ```
-    <html class="h-full bg-white dark:bg-gray-900">
-    <body class="h-full">
-    ```
-  -->
-  <div class="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-    <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-      <!-- <img class="mx-auto h-10 w-auto dark:hidden" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" /> -->
-      <h2 class="mt-10 text-center text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Request new password</h2>
-    </div>
+  <GuestLayout title="Request Password">
 
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
       <form class="space-y-6" action="#" method="POST">
@@ -29,15 +18,23 @@
         </div>
 
         <div>
-          <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:bg-indigo-500 dark:shadow-none dark:hover:bg-indigo-400 dark:focus-visible:outline-indigo-500">Send code</button>
+          <button type="submit" class="flex w-full justify-center gap-2 rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:bg-indigo-500 dark:shadow-none dark:hover:bg-indigo-400 dark:focus-visible:outline-indigo-500">
+            <LockClosedIcon class="h-5 w-5 text-indigo-500 " aria-hidden="true" />
+              Send code</button>
         </div>
       </form>
 
       
     </div>
-  </div>
+  </GuestLayout>
 </template>
 
+
+<script setup>
+  import { LockClosedIcon } from '@heroicons/vue/20/solid';
+  import GuestLayout from '../../components/GuestLayout.vue';
+  
+</script>
 <style scoped>
 
 </style>

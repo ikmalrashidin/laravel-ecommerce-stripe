@@ -1,17 +1,6 @@
 <template>
-  <!--
-    This example requires updating your template:
 
-    ```
-    <html class="h-full bg-white dark:bg-gray-900">
-    <body class="h-full">
-    ```
-  -->
-  <div class="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-    <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-      <!-- <img class="mx-auto h-10 w-auto dark:hidden" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" /> -->
-      <h2 class="mt-10 text-center text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Set new password</h2>
-    </div>
+  <GuestLayout title="Set new password">
 
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
       <form class="space-y-6" action="#" method="POST">
@@ -39,12 +28,13 @@
 
       
     </div>
-  </div>
+  </GuestLayout>
 </template>
 
 
 <script setup>
 import {LockClosedIcon} from '@heroicons/vue/20/solid'
+import GuestLayout from '../../components/GuestLayout.vue';
 </script>
 
 <style scoped>
